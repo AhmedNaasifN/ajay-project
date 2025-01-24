@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 # Handler 
-LOG_FILE = '/tmp/sample-app.log'
+LOG_FILE = '/tmp/updated-sample-app.log'
 handler = logging.handlers.RotatingFileHandler(LOG_FILE, maxBytes=1048576, backupCount=5)
 handler.setLevel(logging.INFO)
 
@@ -22,111 +22,68 @@ welcome = """
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <!--
-    Copyright 2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-    Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
-
-        http://aws.Amazon/apache2.0/
-
-    or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-  -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Welcome</title>
   <style>
   body {
-    color: #ffffff;
-    background-color: #E0E0E0;
+    color: #333333;
+    background-color: #F0F8FF;
     font-family: Arial, sans-serif;
     font-size:14px;
-    -moz-transition-property: text-shadow;
-    -moz-transition-duration: 4s;
-    -webkit-transition-property: text-shadow;
-    -webkit-transition-duration: 4s;
-    text-shadow: none;
+    text-align: center;
   }
-  body.blurry {
-    -moz-transition-property: text-shadow;
-    -moz-transition-duration: 4s;
-    -webkit-transition-property: text-shadow;
-    -webkit-transition-duration: 4s;
-    text-shadow: #fff 0px 0px 25px;
-  }
-  a {
-    color: #0188cc;
-  }
-  .textColumn, .linksColumn {
-    padding: 2em;
-  }
-  .textColumn {
-    position: absolute;
-    top: 0px;
-    right: 50%;
-    bottom: 0px;
-    left: 0px;
-
-    text-align: right;
-    padding-top: 11em;
-    background-color: #1BA86D;
-    background-image: -moz-radial-gradient(left top, circle, #6AF9BD 0%, #00B386 60%);
-    background-image: -webkit-gradient(radial, 0 0, 1, 0 0, 500, from(#6AF9BD), to(#00B386));
-  }
-  .textColumn p {
-    width: 75%;
-    float:right;
-  }
-  .linksColumn {
-    position: absolute;
-    top:0px;
-    right: 0px;
-    bottom: 0px;
-    left: 50%;
-
-    background-color: #E0E0E0;
-  }
-
   h1 {
-    font-size: 500%;
-    font-weight: normal;
-    margin-bottom: 0em;
+    font-size: 300%;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 20px;
   }
   h2 {
     font-size: 200%;
     font-weight: normal;
-    margin-bottom: 0em;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 120%;
+    margin: 15px 0;
+  }
+  a {
+    color: #0066cc;
   }
   ul {
-    padding-left: 1em;
-    margin: 0px;
+    list-style-type: none;
+    padding: 0;
   }
   li {
-    margin: 1em 0em;
+    margin: 10px 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image {
+    margin: 20px 0;
   }
   </style>
 </head>
-<body id="sample">
-  <div class="textColumn">
-    <h1>Congratulations</h1>
-    <p>Your first AWS Elastic Beanstalk Python Application is now running on your own dedicated environment in the AWS Cloud</p>
-    <p>This environment is launched with Elastic Beanstalk Python Platform</p>
-  </div>
-  
-  <div class="linksColumn"> 
-    <h2>What's Next?</h2>
+<body>
+  <div class="container">
+    <h1>Welcome to Your Updated Python App!</h1>
+    <p>This is your newly deployed Python application running in the AWS Cloud.</p>
+    <img src="https://via.placeholder.com/400x200" alt="AWS Python App" class="image">
+    <h2>Explore the following resources:</h2>
     <ul>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk overview</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/index.html?concepts.html">AWS Elastic Beanstalk concepts</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_django.html">Deploy a Django Application to AWS Elastic Beanstalk</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_flask.html">Deploy a Flask Application to AWS Elastic Beanstalk</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/create_deploy_Python_custom_container.html">Customizing and Configuring a Python Container</a></li>
-    <li><a href="http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.loggingS3.title.html">Working with Logs</a></li>
-
+      <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/">AWS Elastic Beanstalk Overview</a></li>
+      <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Python_django.html">Deploy Django Apps to AWS</a></li>
+      <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Python_flask.html">Deploy Flask Apps to AWS</a></li>
+      <li><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.loggingS3.title.html">Working with Logs</a></li>
     </ul>
+    <img src="https://via.placeholder.com/400x200" alt="AWS Services" class="image">
   </div>
 </body>
 </html>
 """
-
 
 def application(environ, start_response):
     path = environ['PATH_INFO']
@@ -136,10 +93,10 @@ def application(environ, start_response):
             if path == '/':
                 request_body_size = int(environ['CONTENT_LENGTH'])
                 request_body = environ['wsgi.input'].read(request_body_size)
-                logger.info("Received a message.")
+                logger.info("Received a message: %s", request_body.decode('utf-8'))
             elif path == '/scheduled':
-                logger.info("Received task %s scheduled at %s", environ['HTTP_X_AWS_SQSD_TASKNAME'],
-                            environ['HTTP_X_AWS_SQSD_SCHEDULED_AT'])
+                logger.info("Received task %s scheduled at %s", environ.get('HTTP_X_AWS_SQSD_TASKNAME', 'unknown'),
+                            environ.get('HTTP_X_AWS_SQSD_SCHEDULED_AT', 'unknown'))
         except (TypeError, ValueError):
             logger.warning('Error retrieving request body for async work.')
         response = ''
